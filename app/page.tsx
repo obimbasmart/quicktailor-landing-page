@@ -1,101 +1,132 @@
+import Features from "@/components/Features";
+import Hero from "@/components/Hero";
+import HowItworks from "@/components/HowItworks";
+import { FEATURES } from "@/constants";
+import Accordion from "@/components/Accordion";
+import { FAQ } from "@/constants";
 import Image from "next/image";
+import AccordionGroup from "@/components/AccordionGroup";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    return (
+        <main>
+            <section>
+                <Hero />
+            </section>
+            <section className="py-6 space-y-6">
+                <h2 className="font-hmedium text-xl text-center mb-4">
+                    Witness Our Standout Features
+                </h2>
+                {FEATURES.map((item) => (
+                    <Features
+                        key={item.title}
+                        title={item.title}
+                        desc={item.desc}
+                    />
+                ))}
+            </section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+            <HowItworks />
+
+            <section className="text-center py-8 space-y-3">
+                <div className="mx-auto max-w-screen-xl text-center lg:py-16 space-y-3 px-2">
+                    <h1 className="text-2xl font-hmedium">
+                        Get Early Access: Join 200+ Users Before Launch!
+                    </h1>
+                    <p className="text-base font-hregular text-gray-1000">
+                        Get ahead by joining now for exclusive early access, and
+                        start creating or discovering your perfect style before
+                        our official launch!
+                    </p>
+                </div>
+                <div className="sm:flex-row sm:justify-center sm:space-y-0">
+                    <a
+                        href="#"
+                        className="inline-flex justify-center items-center py-3 px-6 text-sm font-hmedium text-center text-white rounded-lg bg-primary hover:bg-teal-700  dark:focus:ring-blue-900"
+                    >
+                        Join the Waitlist
+                    </a>
+                </div>
+            </section>
+
+            <section className="py-4">
+                <div className="mx-auto max-w-screen-xl text-center lg:py-16 space-y-3 px-2 mb-3">
+                    <h1 className="text-2xl font-hmedium">
+                        Frequently asked questions
+                    </h1>
+                    <p className="text-base font-hregular text-gray-1000">
+                        Get quick answers to your most common questions
+                    </p>
+
+                    <form className="max-w-md mx-auto">
+                        <label
+                            htmlFor="default-search"
+                            className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+                        >
+                            Search
+                        </label>
+                        <div className="relative">
+                            <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none bg-none">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="21"
+                                    viewBox="0 0 20 21"
+                                    fill="none"
+                                >
+                                    <path
+                                        d="M14.5833 15.0833L18.3333 18.8333"
+                                        stroke="#CECECE"
+                                        stroke-width="1.5"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                    <path
+                                        d="M16.6667 9.66675C16.6667 5.52461 13.3089 2.16675 9.16669 2.16675C5.02455 2.16675 1.66669 5.52461 1.66669 9.66675C1.66669 13.8089 5.02455 17.1667 9.16669 17.1667C13.3089 17.1667 16.6667 13.8089 16.6667 9.66675Z"
+                                        stroke="#CECECE"
+                                        stroke-width="1.5"
+                                        stroke-linejoin="round"
+                                    />
+                                </svg>
+                            </div>
+                            <input
+                                type="search"
+                                id="default-search"
+                                className="placeholder:text-gray-1000 block w-full px-3 py-2 ps-10 text-sm text-gray-1000 border border-gray-500 rounded-lg  focus:ring-teal-500 focus:ring-[1px] focus:border-teal-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                                placeholder="Search for questions..."
+                                required
+                            />
+                        </div>
+                    </form>
+                </div>
+
+                <AccordionGroup />
+            </section>
+
+            <section className="bg-gray-1000 pt-10 rounded-2xl px-4">
+                <div className="text-center space-y-5">
+                    <h3 className="text-gray-700 text-xl font-hmedium">
+                        Don't miss out on the advantages,{" "}
+                        <span className="text-white">download the app now</span>
+                    </h3>
+
+                    <div className="flex flex-row items-center justify-evenly">
+                          <Image src="/images/applestore.png" alt="apple store ..."width={147} height={50}/>
+                          <Image src="/images/playstore.png" alt="apple store ..."width={147} height={50}/>
+                    </div>
+                </div>
+
+                <div className="w-full aspect-[0.9] relative">
+                <Image
+                    alt="Product Image ..."
+                    src={"/images/mobile.png"}
+                    className="w-full h-full"
+                    layout="fill"
+                    objectFit="contain"
+                    quality={100}
+                />
+            </div>
+            </section>
+        </main>
+    );
 }
