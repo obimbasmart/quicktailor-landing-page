@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+// import { useState } from "react";
 
 interface AccordionProps {
     title: string
@@ -24,7 +24,7 @@ const Accordion = ({ title, content, isActive, onPress }: AccordionProps) => {
             </button>
             <div
                 className={`overflow-hidden transition-all duration-700 ease-in-out ${
-                    isActive ? "max-h-36" : "max-h-0"
+                    isActive ? "max-h-36" : "max-h-4"
                 }`}
             >
                 {isActive && (

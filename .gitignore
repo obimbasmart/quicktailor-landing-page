@@ -10,10 +10,14 @@
 /coverage
 
 .eslintrc.json
+ 
 
 # next.js
 /.next/
 /out/
+
+# environment variables
+.env
 
 # production
 /build

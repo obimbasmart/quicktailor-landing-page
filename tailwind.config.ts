@@ -17,6 +17,12 @@ const config: Config = {
       },
       colors: {
         primary: '#006060',
+        teal: {
+          DEFAULT: "#006060",
+          700: "#006060",
+          300: "#B0D8D8",
+          100: "#E6F2F2"
+        },
         gray: {
             1000: '#2D2D2D',
             200: '#F6F6F6',

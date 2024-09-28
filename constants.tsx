@@ -1,3 +1,33 @@
+const ABOUT_LISTS = [
+    {
+        title: "Empowerment",
+        desc: "We empower tailors to showcase their talents and grow their businesses. Our platform provides the tools and support they need to succeed, while also empowering customers with endless customization options.",
+    },
+    {
+        title: "Innovation",
+        desc: "We are committed to continuous improvement and innovation. By leveraging the latest technology, we bridge the gap between tradition and modernity, providing a seamless and efficient service.",
+    },
+
+    {
+        title: "Customer-Centric Approach",
+        desc: "Our platform is designed with you in mind. We prioritize your needs, offering personalized experiences and tailored solutions to ensure your satisfaction from start to finish.",
+    },
+    {
+        title: "Integrity",
+        desc: "Trust and transparency are at the core of everything we do. We maintain the highest ethical standards, ensuring fair practices and honest communication with both tailors and customers.",
+    },
+    {
+        title: "Craftmanship",
+        desc: "Our platform is designed with you in mind. We prioritize your needs, offering personalized experiences and tailored solutions to ensure your satisfaction from start to finish.",
+    },
+
+
+
+
+
+
+]
+
 const FEATURES = [
     {
         title: "Customization",
@@ -103,4 +133,4 @@ const FAQ = [
     },
 ];
 
-export { FEATURES, STEPS, FAQ, ExpertFEATURES };
+export { FEATURES, STEPS, FAQ, ExpertFEATURES, ABOUT_LISTS };
