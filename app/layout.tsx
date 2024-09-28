@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Hammersmith_One } from "next/font/google";
+
 import "./globals.css";
 import { RootNavigation } from "@/components/RootNavigation";
+import Footer from "@/components/Footer";
 
 const helveticaRegular = localFont({
     src: "./fonts/HelveticaNeueRoman.otf",
@@ -12,6 +15,12 @@ const helveticaMedium = localFont({
     src: "./fonts/HelveticaNeueMedium.otf",
     variable: "--font-helvetica-medium",
     // weight: "100 900",
+});
+
+const hammerSmith = Hammersmith_One({
+    variable: "--font-hammersmith-one",
+    subsets: ["latin"],
+    weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -27,10 +36,12 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={`${helveticaRegular.variable} ${helveticaMedium.variable} antialiased font-hregular text-gray-1000 tracking-wide bg-white px-4`}
+                className={`${helveticaRegular.variable} ${helveticaMedium.variable} ${hammerSmith.variable} antialiased font-hregular text-gray-1000 tracking-wide bg-white`}
             >
                 <RootNavigation />
-                {children}
+                <main className="px-4 md:px-20">{children}</main>
+
+                <Footer />
             </body>
         </html>
     );

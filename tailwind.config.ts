@@ -12,7 +12,8 @@ const config: Config = {
     extend: {
       fontFamily: {
         hregular: 'var(--font-helvetica-regular)',
-        hmedium: 'var(--font-helvetica-medium)'
+        hmedium: 'var(--font-helvetica-medium)',
+        hammer: 'var(--font-hammersmith-one)'
       },
       colors: {
         primary: '#006060',
