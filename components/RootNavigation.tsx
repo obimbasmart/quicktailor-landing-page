@@ -33,7 +33,7 @@ export function RootNavigation() {
             </div>
             <Navbar.Collapse>
                 <Navbar.Link
-                    href="#"
+                    href="/"
                     className="text-center py-3 pt-4 text-gray-1000 border-b-gray-500 md:mt-3 tracking-wider"
                 >
                     Home
