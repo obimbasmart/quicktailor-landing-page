@@ -3,36 +3,34 @@ import React from "react";
 
 function EarlyAccess() {
     return (
-        <section>
-            <div>
-                <div className="w-full aspect-[0.9] relative bg-gray-200  rounded-xl">
-                    <Image
-                        alt="Product Image ..."
-                        src={"/images/dashboard.png"}
-                        className="w-full h-full pt-6"
-                        layout="fill"
-                        objectFit="contain"
-                        quality={100}
-                    />
-                </div>
+        <section className="flex flex-col md:flex-row md:py-6">
+            <div className="w-full aspect-[0.9] relative bg-gray-200  rounded-xl md:w-[50%]">
+                <Image
+                    alt="Product Image ..."
+                    src={"/images/dashboard.png"}
+                    className="w-full h-full pt-1/3"
+                    layout="fill"
+                    objectFit="contain"
+                    quality={100}
+                />
             </div>
 
-            <div className="text-center flex flex-col items-center justify-center space-y-2 py-5">
+            <div className="text-center flex flex-col items-center  space-y-2 py-5 md:px-5 md:pt-0">
                 <p className="text-xs bg-[#D9ECEC] w-fit px-2 py-1 rounded-md font-hammer tracking-wider">
                     LAUNCHING LATE 2024
                 </p>
 
-                <h1 className="font-hmedium text-2xl">Get early access</h1>
+                <h1 className="font-hmedium text-2xl md:text-4xl">Get early access</h1>
 
-                <p className="leading-7">
+                <p className="leading-7 md:text-xl">
                     We want to build a product for you, with you. Join our
                     community to be a part of our journey, shape our product and
                     be the first to access atelyo.
                 </p>
 
-                <form className="max-w-sm mx-auto">
+                <form className="w-full mx-auto">
                     <div className="flex flex-row gap-x-3 mb-3">
-                        <div className="">
+                        <div className="w-1/2">
                             <label
                                 htmlFor="email"
                                 className="text-start block mb-1 text-sm font-medium text-gray-1000 dark:text-white"
@@ -46,7 +44,7 @@ function EarlyAccess() {
                                 required
                             />
                         </div>
-                        <div className="">
+                        <div className="w-1/2">
                             <label
                                 htmlFor="email"
                                 className="text-start block mb-1 text-sm font-medium text-gray-1000 dark:text-white"
@@ -95,11 +93,12 @@ function EarlyAccess() {
                             htmlFor="link-checkbox"
                             className="ms-2 text-start text-sm font-medium text-gray-900 dark:text-gray-300 leading-6"
                         >
-                            By ticking this box, you agree to Ateylo to contact you
-                            and Terms & Conditions. We won't share your data.
-                            View our Terms & Conditions and Privacy Policy.
+                            By ticking this box, you agree to Ateylo to contact
+                            you and Terms & Conditions. We won't share your
+                            data. View our Terms & Conditions and Privacy
+                            Policy.
                         </label>
-                    </div> 
+                    </div>
                 </form>
             </div>
         </section>
