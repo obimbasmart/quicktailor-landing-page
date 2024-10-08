@@ -24,7 +24,7 @@ const Accordion = ({ title, content, isActive, onPress }: AccordionProps) => {
             </button>
             <div
                 className={`overflow-hidden transition-all duration-700 ease-in-out ${
-                    isActive ? "max-h-36" : "max-h-4"
+                    isActive ? "max-h-48" : "max-h-4"
                 }`}
             >
                 {isActive && (

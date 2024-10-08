@@ -37,10 +37,10 @@ const theme = {
     },
 };
 
-export function CustomCarousel() {
+export function MDCarousel() {
     return (
         <div className="">
-            <Carousel indicators={false} pauseOnHover theme={theme} className="md:hidden">
+            <section  className="hidden md:flex md:flex-row gap-12 md:flex-wrap rounded-xl md:justify-center md:items-center">
                 {ExpertFEATURES.map((item) => (
                     <ExpertFeatures
                         key={item.title}
@@ -49,7 +49,7 @@ export function CustomCarousel() {
                         image={item.image}
                     />
                 ))}
-            </Carousel>
+            </section>
         </div>
     );
 }

@@ -20,31 +20,29 @@ const ABOUT_LISTS = [
         title: "Craftmanship",
         desc: "Our platform is designed with you in mind. We prioritize your needs, offering personalized experiences and tailored solutions to ensure your satisfaction from start to finish.",
     },
-
-
-
-
-
-
-]
+];
 
 const FEATURES = [
     {
-        title: "Customization",
-        desc: "Our solution is uniquely crafted to cater to your specific preferences and needs, ensuring a perfect fit.",
+        title: "Custom Measurements",
+        desc: "Input your measurements once and get clothes and shoes that fit like they were made for you - because they are.",
     },
     {
-        title: "Trust",
-        desc: "Our team of reliable tailors ensures guaranteed quality, providing you with the trust and assurance you deserve.",
+        title: "Skilled Artisan Network",
+        desc: "Browse our network of experienced craftspeople and find the perfect match for your style.",
+    },
+    {
+        title: "Design Customization",
+        desc: "Your Style, Your Way. Customize every detail of your garment or footwear, from fabric to sole.",
     },
 
     {
-        title: "Availability",
-        desc: "Discover our vast network, comprising of talented tailors who excel in their craft.",
+        title: "Seamless Ordering",
+        desc: "Order custom clothing and shoes online and have them delivered right to your door.",
     },
     {
-        title: "Track Progress",
-        desc: "You can now monitor your order at every single step of the way, ensuring complete visibility and control.",
+        title: "Trust",
+        desc: "Our skilled tailors deliver quality you can trust, giving you the confidence that your custom clothing and shoes are made to perfection.",
     },
 ];
 
@@ -65,7 +63,7 @@ const STEPS = [
         id: "03",
         title: "Recieve Orders",
         desc: "Start receiving orders from customers who love your designs.t.",
-        image: "step2",
+        image: "step3",
     },
     {
         id: "04",
@@ -89,7 +87,7 @@ const ExpertFEATURES = [
     {
         title: "Real-time communication",
         desc: "Our chat feature allows you to connect directly with potential clients, discuss their requirements, and provide personalized services.",
-        image: "feature03.png"
+        image: "feature03.png",
     },
     {
         title: "Simplify your sales",
@@ -101,35 +99,35 @@ const ExpertFEATURES = [
 const FAQ = [
     {
         index: "0",
-        question: "How do I register as a tailor on the platform?",
-        answer: 'To register, visit the "Join as a Tailor" section on our website and fill out the registration form. Our team will review your application and get back to you with the next steps.',
+        question: "What is Atelyo",
+        answer: "Atelyo is an online platform that connects you with  tailors and shoemakers for custom-made clothing and footwear.",
+    },
+    {
+        index: "44",
+        question: "How do I join as a tailor or shoemaker ?",
+        answer: "Start by downloading our app. Once installed, you'll need to enter your brand and business information for verification. After your information is verified, you can begin showcasing your work and receiving orders through the platform",
     },
     {
         index: "1",
-        question: "How can I showcase my work?",
-        answer: "To register, visit the section on our website and fill out the registration form. Our team will review your application and get back to you with the next steps.",
+        question: "Can I choose my own designs",
+        answer: "Absolutely! You can request any design you like. Our artisans can also offer suggestions if you're unsure.",
     },
     {
         index: "2",
         question: "How do I receive payments for my orders?",
-        answer: 'To register, visit the "Join as a Tailor" section on our website and fill out the registration form. Our team will review your application and get back to you with the next steps.',
+        answer: " Payments for your orders on Atelyo are processed securely through our platform. Once a customer completes an order, the payment is held safely until the order is fulfilled. After confirming delivery, the funds will be released directly to your preferred payment method, which you can set up in your account settings"
     },
 
     {
         index: "3",
-        question: "How do I communicate with customers?",
-        answer: 'To register, visit the "Join as a Tailor" section on our website and fill out the registration form. Our team will review your application and get back to you with the next steps.',
+        question: "How do I communicate with artisans?",
+        answer: "Atelyo keeps you connected with your artisan through our in-app chat, where you can discuss your order directly. You can track your order's progress in real-time and receive notifications about updates or messages from your artisan. This ensures clear communication throughout the creation process.",
     },
-    {
-        index: "4",
-        question:
-            "What should I do if a customer requests a change after placing an order?",
-        answer: "To register, visit the section on our website and fill out the registration form. Our team will review your application and get back to you with the next steps.",
-    },
+
     {
         index: "5",
-        question: "How do I receive payments for my orders?",
-        answer: 'To register, visit the "Join as a Tailor" section on our website and fill out the registration form. Our team will review your application and get back to you with the next steps.',
+        question: "What payment methods does Atelyo accepts ?",
+        answer: "Atelyo accepts a variety of payment methods to make transactions easy for everyone. You can pay using, mobile money transfer, or through popular payment platforms like Paystack and Flutterwave. We are constantly working to add more options to ensure flexibility and convenience."
     },
 ];
 

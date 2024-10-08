@@ -5,6 +5,7 @@ export async function POST(req) {
     const { message, to } = await req.json();  
     const accountSid = process.env.TWILIO_ACCOUNT_SID;
     const authToken = process.env.TWILIO_AUTH_TOKEN;
+    console.log(authToken)
     const from = 'whatsapp:+14155238886';  // Twilio sandbox number
 
     const client = twilio(accountSid, authToken);

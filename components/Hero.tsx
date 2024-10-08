@@ -13,9 +13,9 @@ function Hero() {
                     </span>
                 </h1>
 
-                <p className="text-base font-normal text-gray-800 lg:text-xl  dark:text-gray-400 w-full">
-                    Discover talented fashion experts to bring your unique style
-                    to life.
+                <p className="text-base text-left font-normal text-gray-900 lg:text-xl leading-7  dark:text-gray-400 w-full">
+                    Connect with skilled artisans for custom-made clothing and
+                    footwear that fit your style and body perfectly.
                 </p>
                 <Link
                     prefetch

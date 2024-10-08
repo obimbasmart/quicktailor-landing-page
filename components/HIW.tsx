@@ -13,32 +13,24 @@ interface HIWProps {
 
 const HIW = ({ title, desc, id, image }: HIWProps) => {
     return (
-        <Accordion
-            collapseAll
-            className="!rounded-none !border-0 tracking-wide text-dark-700"
-            arrowIcon={() => <p className="text-2xl font-hmedium">{id}</p>}
-        >
-            <Accordion.Panel>
-                <Accordion.Title className="px-2 capitalize font-hmedium  !text-gray-800 text-xl tracking-wide hover:text-gray-1000   focus:ring-0 !rounded-none !border-gray-500 !bg-white py-4">
+        <div className="px-4 text-sm bg-gray-200 rounded-xl py-4 space-y-8 md:w-[600px] max-w-[500px] flex-flex-col md:justify-center md:items-center">
+            <div className="w-full aspect-[0.85] relative rounded-xl max-w-[400px] md:aspect-[1.32] md:justify-center md:items-center">
+                <Image
+                    alt="Product Image ..."
+                    src={`/images/${image}.png`}
+                    className="w-full h-full pt-4"
+                    layout="fill"
+                    objectFit="contain"
+                    quality={100}
+                />
+            </div>
+            <div className="space-y-2.5">
+                <p className="capitalize font-hmedium  !text-gray-900 text-xl tracking-wide hover:text-gray-1000   focus:ring-0 !rounded-none">
                     {title}
-                </Accordion.Title>
-                <Accordion.Content className="border-b-2 px-4 text-sm">
-                    <div className="w-full aspect-[0.9] relative bg-gray-200 rounded-xl">
-                        <Image
-                            alt="Product Image ..."
-                            src={`/images/${image}.png`}
-                            className="w-full h-full pt-4"
-                            layout="fill"
-                            objectFit="contain"
-                            quality={100}
-                        />
-                    </div>
-                    <p className="py-3 text-sm border-b-[1px] border-gray-1000">
-                        {desc}
-                    </p>
-                </Accordion.Content>
-            </Accordion.Panel>
-        </Accordion>
+                </p>
+                <p className="text-sm  tracking-wide md:text-base">{desc}</p>
+            </div>
+        </div>
     );
 };
 

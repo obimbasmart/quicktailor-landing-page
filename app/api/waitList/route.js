@@ -5,10 +5,12 @@ export async function POST(req) {
     const { message, to } = await req.json(); 
     const accountSid = process.env.TWILIO_ACCOUNT_SID;
     const authToken = process.env.TWILIO_AUTH_TOKEN;
+    console.log(authToken)
+    console.log(accountSid)
     const from = 'whatsapp:+14155238886';  // Twilio sandbox number
 
     const client = twilio(accountSid, authToken);
-    const groupMembers = ['++2348130119931']
+    const groupMembers = ['+2348130119931']
 
     try {
         const messageResponses = [];
@@ -21,6 +23,7 @@ export async function POST(req) {
                 to: `whatsapp:${member}`, 
             });
             messageResponses.push(messageResponse);
+            console.log(messageResponse)
         }
 
         return NextResponse.json({ success: true, messageResponses }, { status: 200 });
